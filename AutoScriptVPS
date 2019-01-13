@@ -124,11 +124,6 @@ tar -czf /home/vps/public_html/openvpn.tar.gz client.ovpn
 tar -czf /home/vps/public_html/client.tar.gz client.ovpn
 cd
 
-# Restart OpenVPN
-/etc/init.d/openvpn restart
-service openvpn start
-service openvpn status
-
 # Setting USW
 apt-get install ufw
 ufw allow ssh
@@ -352,6 +347,6 @@ echo -e "\e[94m    LibXML Parser  :   {ON]                       "
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
 echo -e "\e[0m                                                   "
-read -n1 -r -p "          Press Any Key To Show Commands         "
+read -n1 -r -p "               Please Reboot Your VPS            "
 menu
 cd
