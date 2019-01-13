@@ -1,6 +1,6 @@
 #!/bin/bash
 # Original script by : fornesia, rzengineer and fawzya
-# Modified by : _Dreyannz_
+# Modified by : Clrkz
 # ==================================================
 # Initializing Var
 export DEBIAN_FRONTEND=noninteractive
@@ -32,19 +32,18 @@ apt-get update
 # Install Essential Packages
 apt-get -y install nano iptables dnsutils openvpn screen whois ngrep unzip unrar
 
-echo "clear"                                                              >> .bashrc
-echo 'echo -e "\e[0m                                                   "' >> .bashrc
-echo 'echo -e "\e[94m    :::::::::  :::::::::   ::::::::  :::   :::    "' >> .bashrc
-echo 'echo -e "\e[94m    :+:    :+: :+:    :+: :+:    :+: :+:   :+:    "' >> .bashrc
-echo 'echo -e "\e[94m    +:+    +:+ +:+    +:+        +:+  +:+ +:+     "' >> .bashrc
-echo 'echo -e "\e[94m    +#+    +:+ +#++:++#:      +#++:    +#++:      "' >> .bashrc
-echo 'echo -e "\e[94m    +#+    +#+ +#+    +#+        +#+    +#+       "' >> .bashrc
-echo 'echo -e "\e[94m    #+#    #+# #+#    #+# #+#    #+#    #+#       "' >> .bashrc
-echo 'echo -e "\e[94m    #########  ###    ###  ########     ###       "' >> .bashrc
-echo 'echo -e "\e[94m           AutoScriptVPS by  _Dreyannz_           "' >> .bashrc
-echo 'echo -e "\e[0m"'                                                    >> .bashrc
-echo 'echo -e "\e[94m             [accounts/options/server]            "' >> .bashrc
-echo 'echo -e "\e[0m                                                   "' >> .bashrc
+echo "clear"                                                                          >> .bashrc
+echo 'echo -e "\e[0m                                                               "' >> .bashrc
+echo 'echo -e "\e[94m     ::::::::   :::         :::::::::   :::    :::  ::::::::: "' >> .bashrc
+echo 'echo -e "\e[94m    :+:    :+:  :+:         :+:    :+:  :+:   :+:        :+:  "' >> .bashrc
+echo 'echo -e "\e[94m    +:+         +:+         +:+    +:+  +:+  +:+        +:+   "' >> .bashrc
+echo 'echo -e "\e[94m    +#+         +#+         +#++:++#:   +#++:++        +#+    "' >> .bashrc
+echo 'echo -e "\e[94m    +#+         +#+         +#+    +#+  +#+  +#+      +#+     "' >> .bashrc
+echo 'echo -e "\e[94m    #+#    #+#  #+#         #+#    #+#  #+#   #+#    #+#      "' >> .bashrc
+echo 'echo -e "\e[94m     ########   ##########  ###    ###  ###    ###  ######### "' >> .bashrc
+echo 'echo -e "\e[0m"'                                                                >> .bashrc
+echo 'echo -e "\e[94m             [accounts/options/server]                        "' >> .bashrc
+echo 'echo -e "\e[0m                                                               "' >> .bashrc
 
 # Install WebServer
 apt-get -y install nginx
@@ -53,74 +52,90 @@ apt-get -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Nginx/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Nginx/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<h1><center>AutoScriptVPS by _Dreyannz_</center></h1>" > /home/vps/public_html/index.html
-echo "<h3><center>For More Info Visit My <a href="https://github.com/Dreyannz">Github Repositories</a></center><h3>" >> /home/vps/public_html/index.html
-echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/Dreyannz">Facebook</a> and <a href="https://twitter.com/Dreyannz">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Nginx/vps.conf"
+echo "<h1><center>AutoScriptVPS by Clrkz</center></h1>" > /home/vps/public_html/index.html
+echo "<h3><center>For More Info Visit My <a href="https://github.com/Clrkz">Github Repositories</a></center><h3>" >> /home/vps/public_html/index.html
+echo "<h3><center>You Can Also Contact Me at <a href="https://www.facebook.com/143Clarkz">Facebook</a> and <a href="https://twitter.com/143Clrkz">Twitter</a></center></h3>" >> /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Nginx/vps.conf"
 service nginx restart
 
 # Install OpenVPN
-apt-get -y install openvpn easy-rsa openssl iptables
-cp -r /usr/share/easy-rsa/ /etc/openvpn
-mkdir /etc/openvpn/easy-rsa/keys
-sed -i 's|export KEY_COUNTRY="US"|export KEY_COUNTRY="PH"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_PROVINCE="CA"|export KEY_PROVINCE="Manila"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_CITY="SanFrancisco"|export KEY_CITY="Manila"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_ORG="Fort-Funston"|export KEY_ORG="CoffeeWorks"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="dreyannzoctat@gmail.com"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="CoffeeWorks"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="Dreyannz"|' /etc/openvpn/easy-rsa/vars
-sed -i 's|export KEY_OU=changeme|export KEY_OU=Dreyannz|' /etc/openvpn/easy-rsa/vars
+apt-get -y install openvpn unzip;
 
-# Create Diffie-Helman Pem
-openssl dhparam -out /etc/openvpn/dh2048.pem 2048
+# download cert openvpn config
+wget https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Certificate/cert.zip -O cert.zip
+unzip cert.zip
+rm zip*
+cp -r config/* /etc/openvpn
+cd /root
+chmod -R 755 /etc/openvpn
 
-# Create PKI
-cd /etc/openvpn/easy-rsa
-. ./vars
-./clean-all
-export EASY_RSA="${EASY_RSA:-.}"
-"$EASY_RSA/pkitool" --initca $*
+# Creating OpenVPN Config
+cat > /root/client.ovpn <<-END
+client
+dev tun
+proto tcp
+remote $MYIP 443
+resolv-retry infinite
+redirect-gateway def1
+nobind
+sndbuf 393216
+rcvbuf 393216
+tun-mtu 1470
+mssfix 1430
+auth-user-pass
+comp-lzo
+http-proxy $MYIP 8000
+http-proxy-retry
+http-proxy-timeout 5
+http-proxy-option CUSTOM-HEADER Host www.googlevideo.com
+http-proxy-option CUSTOM-HEADER X-Online-Host www.googlevideo.com
+route $MYIP 255.255.255.255 vpn_gateway
+keepalive 10 120
+reneg-sec 432000
+verb 3
+script-security 3
+setenv CLIENT_CERT 0
 
-# Create key server
-export EASY_RSA="${EASY_RSA:-.}"
-"$EASY_RSA/pkitool" --server server
-
-# Setting KEY CN
-export EASY_RSA="${EASY_RSA:-.}"
-"$EASY_RSA/pkitool" client
-
-
-# cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
-cd
-cp /etc/openvpn/easy-rsa/keys/server.crt /etc/openvpn/server.crt
-cp /etc/openvpn/easy-rsa/keys/server.key /etc/openvpn/server.key
-cp /etc/openvpn/easy-rsa/keys/ca.crt /etc/openvpn/ca.crt
-
-# Setting Server
-cd /etc/openvpn/
-wget "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/OpenVPN/server.conf"
-
-#Create OpenVPN Config
-cd
-mkdir -p /home/vps/public_html
-cd /home/vps/public_html/
-wget "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/OpenVPN/client.ovpn"
-sed -i $MYIP2 /home/vps/public_html/client.ovpn;
-echo '<ca>' >> /home/vps/public_html/client.ovpn
-cat /etc/openvpn/ca.crt >> /home/vps/public_html/client.ovpn
-echo '</ca>' >> /home/vps/public_html/client.ovpn
-cd /home/vps/public_html/
-tar -czf /home/vps/public_html/openvpn.tar.gz client.ovpn
-tar -czf /home/vps/public_html/client.tar.gz client.ovpn
+END
+echo '<ca>' >> /root/client.ovpn
+cat /etc/openvpn/ca.crt >> /root/client.ovpn
+echo '</ca>' >> /root/client.ovpn
 cd
 
-# Restart OpenVPN
-/etc/init.d/openvpn restart
-service openvpn start
-service openvpn status
+# Enable net.ipv4.ip_forward 
+sed -i '/\<net.ipv4.ip_forward\>/c\net.ipv4.ip_forward=1' /etc/sysctl.conf
+	if ! grep -q "\<net.ipv4.ip_forward\>" /etc/sysctl.conf; then
+		echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf
+	fi
+
+	echo 1 > /proc/sys/net/ipv4/ip_forward
+	if pgrep firewalld; then
+		firewall-cmd --zone=public --add-port=443/tcp
+		firewall-cmd --zone=trusted --add-source=10.8.0.0/24
+		firewall-cmd --permanent --zone=public --add-port=443/tcp
+		firewall-cmd --permanent --zone=trusted --add-source=10.8.0.0/24
+		firewall-cmd --direct --add-rule ipv4 nat POSTROUTING 0 -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $MYIP
+		firewall-cmd --permanent --direct --add-rule ipv4 nat POSTROUTING 0 -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $MYIP
+	else
+		if [[ "$OS" = 'debian' && ! -e $RCLOCAL ]]; then
+			echo '#!/bin/sh -e
+exit 0' > $RCLOCAL
+		fi
+		chmod +x $RCLOCAL
+
+		iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $MYIP
+		sed -i "1 a\iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to $MYIP" $RCLOCAL
+		if iptables -L -n | grep -qE '^(REJECT|DROP)'; then
+			iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+			iptables -I FORWARD -s 10.8.0.0/24 -j ACCEPT
+			iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+			sed -i "1 a\iptables -I INPUT -p tcp --dport 443 -j ACCEPT" $RCLOCAL
+			sed -i "1 a\iptables -I FORWARD -s 10.8.0.0/24 -j ACCEPT" $RCLOCAL
+			sed -i "1 a\iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT" $RCLOCAL
+		fi
+	fi
 
 # Setting USW
 apt-get install ufw
@@ -129,21 +144,17 @@ ufw allow 1194/tcp
 sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
 sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
 cd /etc/ufw/
-wget "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/OpenVPN/before.rules"
+wget "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/OpenVPN/before.rules"
 cd
 ufw enable
 ufw status
 ufw disable
 
-# set ipv4 forward
-echo 1 > /proc/sys/net/ipv4/ip_forward
-sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
-
 # Install BadVPN
 cd
-wget -O /usr/bin/badvpn-udpgw "https://github.com/Dreyannz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/Dreyannz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/BadVPN/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
@@ -154,7 +165,6 @@ cd
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port  81' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
-service ssh restart
 
 # Install Dropbear
 apt-get -y install dropbear
@@ -163,38 +173,32 @@ sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 82 -p 142"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-service ssh restart
-service dropbear restart
 
 # Install Squid3
 cd
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Squid/squid3.conf"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Squid/squid3.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
-service squid3 restart
 
 # Install WebMin
 cd
 apt-get -y install webmin
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
-service webmin restart
 
 # Install Stunnel
 apt-get -y install stunnel4
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Stunnel/stunnel.pem"
-wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Stunnel/stunnel.conf"
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Stunnel/stunnel.pem"
+wget -O /etc/stunnel/stunnel.conf "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Stunnel/stunnel.conf"
 sed -i $MYIP2 /etc/stunnel/stunnel.conf
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
-service stunnel4 restart
 
 # Install Fail2Ban
 apt-get -y install fail2ban;
-service fail2ban restart
 
 # Install DDOS Deflate
 cd
 apt-get -y install dnsutils dsniff
-wget "https://github.com/Dreyannz/AutoScriptVPS/raw/master/Files/Others/ddos-deflate-master.zip"
+wget "https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/Others/ddos-deflate-master.zip"
 unzip ddos-deflate-master.zip
 cd ddos-deflate-master
 ./install.sh
@@ -203,7 +207,7 @@ rm -rf ddos-deflate-master.zip
 
 # Banner
 rm /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Others/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Others/issue.net"
 sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 service ssh restart
@@ -215,12 +219,12 @@ apt-get -y --force-yes -f install libxml-parser-perl
 
 # Install Screenfetch
 apt-get -y install lsb-release scrot
-wget -O screenfetch "https://raw.githubusercontent.com/Dreyannz/AutoScriptVPS/master/Files/Others/screenfetch"
+wget -O screenfetch "https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/Files/Others/screenfetch"
 chmod +x screenfetch
 
 # Download Commands
 cd /usr/bin
-wget https://github.com/Dreyannz/AutoScriptVPS/raw/master/Files/Menu/AutoScript_Menu.tar.gz
+wget https://github.com/Clrkz/AutoScriptVPS/raw/master/Files/Menu/AutoScript_Menu.tar.gz
 tar -xzvf AutoScript_Menu.tar.gz
 rm AutoScript_Menu.tar.gz
 sed -i -e 's/\r$//' accounts
@@ -304,15 +308,19 @@ chmod +x speedtest
 cd
 chown -R www-data:www-data /home/vps/public_html
 service nginx start
-service openvpn restart
 service cron restart
+service fail2ban restart
 service ssh restart
+service stunnel4 restart
 service dropbear restart
 service squid3 restart
 service webmin restart
 rm -rf ~/.bash_history && history -c
 rm -f /root/AutoScriptVPS.sh
 echo "unset HISTFILE" >> /etc/profile
+/etc/init.d/openvpn restart
+service openvpn start
+service openvpn status
 
 # grep ports 
 opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
@@ -327,8 +335,6 @@ clear
 echo -e ""
 echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[94m           AutoScriptVPS by  _Dreyannz_           "
-echo -e "\e[94m                                                  "
 echo -e "\e[94m                    Services                      "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m    OpenSSH        :   "$opensshport
@@ -350,6 +356,6 @@ echo -e "\e[94m    LibXML Parser  :   {ON]                       "
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
 echo -e "\e[0m                                                   "
-read -n1 -r -p "          Press Any Key To Show Commands          "
+read -n1 -r -p "          Press Any Key To Show Commands         "
 menu
 cd
