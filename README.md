@@ -26,13 +26,13 @@
 <h3 align="center">Installation</h3>
 
 <p align="center">
-wget -O AutoScriptVPS https://git.io/fA44Xhttps://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/AutoScriptVPS
-  </p>
-  <p align="center">
-  chmod +x AutoScriptVPS
-  </p>
-  <p align="center">
-  ./AutoScriptVPS
+wget -O AutoScriptVPS https://raw.githubusercontent.com/Clrkz/AutoScriptVPS/master/AutoScriptVPS && chmod +x AutoScriptVPS && ./AutoScriptVPS
+
+
+
+
+
+
 </p>
 
 <h3 align="center">Screenshots</h3>
