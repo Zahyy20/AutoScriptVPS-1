@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m            [1]  AutoKill After 5 Minutes"
 echo -e "\e[93m            [2]  AutoKill After 15 Minutes"
@@ -25,8 +23,6 @@ case $AutoKill in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Allowed MultiLogin : "$MultiLogin
 		echo -e "\e[93m             AutoKill Every     : 5 Minutes"
 		echo -e "\e[0m                                                   "
@@ -42,8 +38,6 @@ case $AutoKill in
 		echo "*/15 * * * *  root /usr/bin/set_multilogin_autokill_lib $MultiLogin" > /etc/cron.d/set_multilogin_autokill_lib
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Allowed MultiLogin : "$MultiLogin
 		echo -e "\e[93m             AutoKill Every     : 15 Minutes"
@@ -61,8 +55,6 @@ case $AutoKill in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Allowed MultiLogin : "$MultiLogin
 		echo -e "\e[93m             AutoKill Every     : 30 Minutes"
 		echo -e "\e[0m                                                   "
@@ -74,8 +66,6 @@ case $AutoKill in
 		rm -f /etc/cron.d/set_multilogin_autokill_lib
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m              AutoKill MultiLogin Turned               "
 		echo -e "\e[0m                                                   "

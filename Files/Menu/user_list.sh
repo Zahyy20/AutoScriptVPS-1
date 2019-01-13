@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 if [ -f /etc/debian_version ]; then
 	UIDN=1000
 elif [ -f /etc/redhat-release ]; then
@@ -10,8 +10,6 @@ fi
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m           Username          Expiration           \e[0m"
 echo " "

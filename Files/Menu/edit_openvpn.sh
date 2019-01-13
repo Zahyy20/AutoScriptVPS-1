@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 rm -f /root/opensshport
 rm -f /root/dropbearport
 rm -f /root/stunnel4port
@@ -35,8 +35,6 @@ cd
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m                   OpenVPN Port                   "
 echo -e "\e[93m                       "$openvpnport
@@ -92,8 +90,6 @@ if [ $? -eq 0 ]; then
 	clear
 	echo -e "\e[0m                                                   "
 	echo -e "\e[94m[][][]======================================[][][]"
-	echo -e "\e[0m                                                   "
-	echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 	echo -e "\e[0m                                                   "
 	echo -e "\e[93m                   OpenVPN Port                   "
 	echo -e "\e[93m                       "$openvpnport

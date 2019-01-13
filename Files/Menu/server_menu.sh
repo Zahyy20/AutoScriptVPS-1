@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m            [1] Change Server Password"
 echo -e "\e[93m            [2] RAM Usage"
@@ -22,8 +20,6 @@ case $Server in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Checking root Permissions            "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -33,8 +29,6 @@ case $Server in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[91m              root Permissions Denied             "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -43,8 +37,6 @@ case $Server in
 		clear
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		read -p "         New Password   :  " Pass
 		echo -e "\e[0m                                                   "
@@ -56,8 +48,6 @@ case $Server in
 		rm passwd
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m            Password Has Been Changed             "
 		echo -e "\e[0m                                                   "

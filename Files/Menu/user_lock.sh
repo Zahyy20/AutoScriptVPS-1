@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 read -p "         Username       :  " User
 egrep "^$User" /etc/passwd >/dev/null
@@ -16,8 +14,6 @@ then
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-echo -e "\e[0m                                                   "
 echo -e "\e[91m           User Has Been Locked Already           "
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -26,8 +22,6 @@ else
   clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[91m               User Has Been Locked               "
 echo -e "\e[91m        User Has Been Added To Locked_List        "
@@ -41,8 +35,6 @@ else
 	clear
 	echo -e "\e[0m                                                   "
 	echo -e "\e[94m[][][]======================================[][][]"
-	echo -e "\e[0m                                                   "
-	echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 	echo -e "\e[0m                                                   "
 	echo -e "\e[91m              Username Doesnt Exist               "
 	echo -e "\e[0m                                                   "

@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 read -p "         Username       :  " User
 
@@ -14,8 +12,6 @@ if [ $? -eq 0 ]; then
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m              Username Already Exist              "
 echo -e "\e[0m                                                   "
@@ -47,8 +43,6 @@ echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "         Username        :  $User"
 echo -e "         Password        :  $Pass"

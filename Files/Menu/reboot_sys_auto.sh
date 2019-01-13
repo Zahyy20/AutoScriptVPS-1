@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m            [1] Reboot Every 1 Hour"
 echo -e "\e[93m            [2] Reboot Every 2 Hours"
@@ -27,8 +25,6 @@ case $Reboot_Sys in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m            Auto-Reboot Set Every Hour            "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -39,8 +35,6 @@ case $Reboot_Sys in
 		echo "10 */6 * * * root /usr/local/bin/reboot_sys" > /etc/cron.d/reboot_sys
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m           Auto-Reboot Set Every 2 Hours          "
 		echo -e "\e[0m                                                   "
@@ -53,8 +47,6 @@ case $Reboot_Sys in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m          Auto-Reboot Set Every 12 Hours          "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -65,8 +57,6 @@ case $Reboot_Sys in
 		echo "10 0 * * * root /usr/local/bin/reboot_sys" > /etc/cron.d/reboot_sys
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m            Auto-Reboot Set Once A Day            "
 		echo -e "\e[0m                                                   "
@@ -79,8 +69,6 @@ case $Reboot_Sys in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m           Auto-Reboot Set Once A Week            "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -92,8 +80,6 @@ case $Reboot_Sys in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m           Auto-Reboot Set Once A Month           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -104,8 +90,6 @@ case $Reboot_Sys in
 		rm -f /etc/cron.d/reboot_sys
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m                Auto-Reboot Removed               "
 		echo -e "\e[0m                                                   "

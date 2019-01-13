@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 read -p "         No. of Users   :  " No_User
 read -p "         Active Days    :  " Days
@@ -16,8 +14,6 @@ Today="$(date +"%Y-%m-%d")"
 Expire_On=$(date -d "$Days days" +"%Y-%m-%d")
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 for (( i=1; i <= $No_User; i++ ))
 do

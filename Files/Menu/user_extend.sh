@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 read -p "         Username       :  " User
 egrep "^$User" /etc/passwd >/dev/null
@@ -23,8 +21,6 @@ clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
 echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-echo -e "\e[0m                                                   "
 echo -e "         Username        :  $User"
 echo -e "         Days Added      :  $Days Days"
 echo -e "         Expires on      :  $Expiration_Display"
@@ -34,8 +30,6 @@ else
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m              Username Doesnt Exist               "
 echo -e "\e[0m                                                   "

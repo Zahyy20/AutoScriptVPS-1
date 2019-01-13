@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 User=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
@@ -18,8 +18,6 @@ useradd -e `date -d "$Days days" +"%Y-%m-%d"` -s /bin/false -M $User
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "\e[94m[][][]=====================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "         Username        :  $User"
 echo -e "         Password        :  $Pass"

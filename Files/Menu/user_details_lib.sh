@@ -1,13 +1,11 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 Username=`cat /etc/passwd | grep -Ew ^$1 | cut -d":" -f1`
 if [ "$Username" = "" ]
 then
 	clear
 	echo -e "\e[0m                                                   "
 	echo -e "\e[94m[][][]======================================[][][]"
-	echo -e "\e[0m                                                   "
-	echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 	echo -e "\e[0m                                                   "
 	echo -e "\e[93m              Username Doesnt Exist               "
 	echo -e "\e[0m                                                   "
@@ -28,8 +26,6 @@ HomeDirSize=`du -hs $UserHomeDir | awk '{print $1}'`
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 printf "%-25s : %5s\n"   "      Username                 " "$Username"
 printf "%-25s : %5s\n"   "      Password previous change " "$LastPasswordChangeDate"

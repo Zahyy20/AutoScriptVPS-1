@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script by : _Dreyannz_
+# Script by : Clrkz
 clear
 echo -e "\e[0m                                                   "
 echo -e "\e[94m[][][]======================================[][][]"
-echo -e "\e[0m                                                   "
-echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 echo -e "\e[0m                                                   "
 echo -e "\e[93m            [1] Restart All Services"
 echo -e "\e[93m            [2] Restart OpenSSH"
@@ -32,8 +30,6 @@ case $Restart in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m                Service/s Restarted               "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -44,8 +40,6 @@ case $Restart in
 		service ssh restart
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m              SSH Service Restarted               "
 		echo -e "\e[0m                                                   "
@@ -58,8 +52,6 @@ case $Restart in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m            Dropbear Service Restarted            "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -70,8 +62,6 @@ case $Restart in
 		service stunnel4 restart
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m            Stunnel4 Service Restarted            "
 		echo -e "\e[0m                                                   "
@@ -84,8 +74,6 @@ case $Restart in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m            OpenVPN Service Restarted             "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -97,8 +85,6 @@ case $Restart in
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
 		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
-		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Squid3 Service Restarted             "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]\e[0m"
@@ -109,8 +95,6 @@ case $Restart in
 		service nginx restart
 		echo -e "\e[0m                                                   "
 		echo -e "\e[94m[][][]======================================[][][]"
-		echo -e "\e[0m                                                   "
-		echo -e "\e[93m           AutoScriptVPS by  _Dreyannz_           "
 		echo -e "\e[0m                                                   "
 		echo -e "\e[93m             Nginx Service Restarted              "
 		echo -e "\e[0m                                                   "
